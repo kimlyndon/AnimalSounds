@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,90 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimalSounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9wa-Ik-Jmk">
+                                <rect key="frame" x="36" y="132" width="268" height="176"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lLb-zt-gxy">
+                                        <rect key="frame" x="0.0" y="0.0" width="268" height="176"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Sounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyb-f7-agh">
+                                                <rect key="frame" x="56.5" y="0.0" width="155.5" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="mty-Xh-GCv">
+                                                <rect key="frame" x="0.0" y="39" width="268" height="98"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlo-ij-WeF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="78" height="98"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                        <state key="normal" title="🐱"/>
+                                                        <connections>
+                                                            <action selector="catButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="frb-N5-PcF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4l-cV-Yos">
+                                                        <rect key="frame" x="96" y="0.0" width="77" height="98"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                        <state key="normal" title="🐶"/>
+                                                        <connections>
+                                                            <action selector="dogButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R4u-SI-0Lu"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1y-Ph-d9c">
+                                                        <rect key="frame" x="191" y="0.0" width="77" height="98"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                        <state key="normal" title="🐮"/>
+                                                        <connections>
+                                                            <action selector="cowButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W9i-fc-MWJ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="O4l-cV-Yos" firstAttribute="centerX" secondItem="mty-Xh-GCv" secondAttribute="centerX" id="YPR-2n-PAe"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap an animal " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iY-eg-WNh">
+                                                <rect key="frame" x="61" y="147" width="146" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="2iY-eg-WNh" firstAttribute="leading" secondItem="lLb-zt-gxy" secondAttribute="leading" constant="61" id="GOd-Ay-f9u"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lLb-zt-gxy" firstAttribute="centerY" secondItem="9wa-Ik-Jmk" secondAttribute="centerY" id="00G-TY-8sn"/>
+                                    <constraint firstItem="lLb-zt-gxy" firstAttribute="centerX" secondItem="9wa-Ik-Jmk" secondAttribute="centerX" id="9IO-34-4y9"/>
+                                    <constraint firstItem="lLb-zt-gxy" firstAttribute="centerX" secondItem="9wa-Ik-Jmk" secondAttribute="centerX" id="FUe-p7-JgI"/>
+                                    <constraint firstItem="lLb-zt-gxy" firstAttribute="centerY" secondItem="9wa-Ik-Jmk" secondAttribute="centerY" id="IFK-t1-Fd2"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9wa-Ik-Jmk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9wC-OY-6Da"/>
+                            <constraint firstItem="9wa-Ik-Jmk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="YhZ-gV-umk"/>
+                            <constraint firstItem="9wa-Ik-Jmk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="112" id="lXM-gb-gM1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="animalSoundLabel" destination="hyb-f7-agh" id="OLb-MF-qk7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.875" y="133.75"/>
         </scene>
     </scenes>
 </document>
